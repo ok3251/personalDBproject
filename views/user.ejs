@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>USERS</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ADDRESS</th>
+                <th>NUMBER</th>
+                <th>REWARD POINTS</th>
+                <th>ADMIN?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% var user = data %>
+            <% for(var i =0; i< user.length; i++) {%>
+                <tr>
+                    <td><%= user[i].user_id %></td>
+                    <td><%= user[i].user_name %></td>
+                    <td><%= user[i].user_address %></td>
+                    <td><%= user[i].user_pwd %></td>
+                    <td><%= user[i].user_num %></td>
+                    <td><%= user[i].user_num %></td>
+                </tr>
+            <% } %>
+        </tbody>
+        
+    </table>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>메뉴판</title>
+    <link rel='stylesheet' href='/stylesheets/mainpage.css' />
+</head>
+<body>
+    <div class="container">
+        <div class="Header">
+            <div class="Headerbtn">
+                <% if (user) { %>
+                    <a><input type="submit" value="마이페이지"></a>
+                    <form action="/main" method="post">
+                        <a><input type="submit" value="로그아웃"></a>
+                    </form>
+                <% } else { %>
+                    <a href="/login"><input type="submit" value="로그인"/></a>
+                    <a href="/register"><input type="submit" value="회원가입"></a>
+                <% } %>
+            </div>
+            <h2>메뉴</h2>
+        </div>
+        <div class="mainpage">
+            <% var coffee = Coffee %>
+            <% var bread = Bread %>
+            <div class="menu">
+                <div class="menuheader">음료</div>
+                <div class="menutable">
+                    <% coffee.forEach(function(coffeeItem) { %> 
+                        <div class="coffeediv">
+                            <div class="menuname">
+                                <%= coffeeItem.menu_name %>
+                            </div>
+                            <div class="menupricec">
+                                <%= coffeeItem.menu_price + '원' %>
+                            </div>
+                            <form action="menuselect" method="post">
+                                <input type="submit" name="menuName" value="담기">
+                            </form>
+                        </div>
+                    <% }); %>
+                </div>
+                <div class="menuheader">빵</div>
+                <div class="menutable">
+                    <% bread.forEach(function(breadItem) { %> 
+                        <div class="breaddiv">
+                            <div class="menuname">
+                                <%= breadItem.menu_name %>
+                            </div>
+                            <div class="menupricec">
+                                <%= breadItem.menu_price + '원' %>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

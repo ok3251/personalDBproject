@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MainPage</title>
+    <link rel="stylesheet" href="/stylesheets/mainpage.css" >
+  </head>
+  <body>
+
+    <div class="container">
+      <!-- 헤더 -->
+      <div class="Header">
+        <div class="Headerbtn">
+          
+          <% if (user) { %>
+            <a><input type="submit" value="장바구니"></a>
+            <form action="main" method="post">
+              <a><input type="submit" value="로그아웃"></a>
+            </form>
+            
+          <% } else { %>
+            <a href="/login"><input type="submit" value="로그인"/></a>
+            <a href="/register"><input type="submit" value="회원가입"></a>
+          <% } %>
+            
+        </div>
+        <h1>메인페이지</h1>
+      </div>
+      <!-- 메인페이지 -->
+      <div class="mainpage">
+        <div class="seatctrl">
+          <div class="seat seat1">1</div>
+          <div class="seat seat2">2</div>
+          <div class="seat seat3">3</div>
+          <div class="seat seat4">4</div>
+          <div class="seat seat5">5</div>
+          <div class="seat seat6">6</div>
+          <div class="seat seat7">7</div>
+          <div class="seat seat8">8</div>
+          <div class="seat seat9">9</div>
+          <div class="seat seat10">10</div>
+          <div class="seat seat11">11</div>
+          <div class="seat seat12">12</div>
+          <div class="seat seat13">13</div>
+          <div class="seat seat14">14</div>
+          <div class="seat seat15">15</div>
+          <div class="seat seat16">16</div>
+          <div class="seat seat17">17</div>
+          <div class="seat seat18">18</div>
+          <div class="seat seat19">19</div>
+          <div class="seat seat20">20</div>
+        </div>
+        
+      </div>
+    </div>
+
+  </body>
+  <script>
+    var seatElements = document.getElementsByClassName("seat");
+
+    for (var i = 0; i < seatElements.length; i++) {
+      seatElements[i].addEventListener('click', function() {
+        window.location.href = '/menuselect';
+      });
+    }
+  </script>
+</html>

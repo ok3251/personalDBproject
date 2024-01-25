@@ -1,0 +1,132 @@
+/* 메인페이지 */
+
+.container{
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin:20px auto;
+    padding:20px;
+    min-width: 1000px;
+
+}
+
+
+/* 메인페이지 헤더 */
+.Header{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0px auto;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    background-color: beige;
+
+}
+
+.Headerbtn{
+    width:100vw;
+    max-width: 1000px;
+    height:100vh;
+    max-height: 30px;
+    display:flex;
+    flex-direction: row-reverse;
+    margin-top:1vw;
+    margin-right:3vw;
+
+}
+/* 메인페이지 본문 */
+.mainpage{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    width: 100%;
+    height:100vh;
+    max-height: 1000px;
+    margin: 0px auto;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    background-color: rgb(239, 249, 255)
+}
+
+.seatctrl{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    
+}
+
+.seatctrl .seat{
+    display:flex;
+    width:150px;
+    height:150px;
+    border: 1px solid gray;
+    margin:20px;
+    background-color: rgb(243, 255, 255);
+    align-items: center;
+    justify-content: center;
+    cursor:default;
+}
+
+
+/* 메뉴 */
+.menu{
+    display:flex;
+    flex-direction: column;
+    
+}
+/* 메뉴 헤더 */
+.menuheader{
+    width:100vw;
+    max-width: 1000px;
+    height:3vh;
+    max-height: 30px;
+    background-color: gray;
+    text-align: center;
+    font-size: 20px;
+
+}
+
+/* 메뉴 선택창 */
+.menu .menutable{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 메뉴 선택가능div */
+.menu .coffeediv{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width:150px;
+    height:150px;
+    background-color: black;
+    color:white;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu .breaddiv{
+    display:flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    width:150px;
+    height:150px;
+    background-color: black;
+    color:white;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 메뉴 이름 */
+.menuname{
+    font-size:30px;
+}

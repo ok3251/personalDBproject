@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LoginPage</title>
+    <link rel='stylesheet' href='/stylesheets/mainpage.css' />
+  </head>
+  <body>
+    <% if (regmessage) { %>
+      <script>
+        alert("<%= regmessage %>");
+      </script>
+    <% } %>
+    <div class="container">
+      <div class="Header">
+        <div class="Headerbtn">
+          <a href="main"><input type="submit" value="메인페이지"></a>
+          <a href="/register"><input type="submit" value="회원가입"></a>
+        </div>
+        <h2>로그인</h2>
+      </div>
+      <div class="mainpage">
+        <form action="login" method="post">
+          <p>
+            <span><input class="login" type="text" name="userId" placeholder="아이디" required></span>
+          </p>
+          <p>
+            <span><input class="password" type="password" name="userPwd" placeholder="비밀번호" required></span>
+          </p>
+          <% if (logError && logError.exid) { %>
+            <span style="color: red;"><%= logError.exid %></span>
+          <% } %>
+            <p><input class="btn" type="submit" value="로그인"> </p>
+        </form>
+      </div>
+    </div>
+    
+  </body>
+</html>

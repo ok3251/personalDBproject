@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>회원가입</title>
+    <link rel='stylesheet' href='/stylesheets/mainpage.css' />
+  </head>
+  <body>
+    <div class="container">
+      <div class="Header">
+        <div class="Headerbtn">
+          <a href="main"><input type="submit" value="메인페이지"></a>
+          <a href="login"><input type="submit" value="로그인"></a>
+        </div>
+        <h2>회원가입</h2>
+      </div>
+      <div class="mainpage">
+        <form action="register" method="post">
+          <p>  
+          <span><input class="nickname" type="text" name="nickname" placeholder="닉네임" required></span>
+          <% if (error && error.nickname) { %>
+            <span style="color: red;"><%= error.nickname %></span>
+          <% } %>
+          </p>
+          <p>
+          <span><input class="id" type="text" name="id" placeholder="아이디" required></span>
+          <% if (error && error.id) { %>
+            <span style="color: red;"><%= error.id %></span>
+          <% } %>
+          </p>
+          <p>
+            <span><input class="password" type="password" name="pwd" placeholder="비밀번호" required></span>
+            <% if (error && error.password) { %>
+              <span style="color: red;"><%= error.password %></span>
+            <% } %>
+          </p>
+          <p>
+            <span><input class="passwordcheck" type="password" name="pwdcheck" placeholder="비밀번호 확인" required></span>
+            <% if (error && error.passwordcheck) { %>
+              <span style="color: red;"><%= error.passwordcheck %></p>
+            <% } %>
+          </p>
+            <p><input class="btn" type="submit" value="회원가입"></p>
+        </form>
+      </div>      
+    </div> 
+    
+  </body>
+</html>
